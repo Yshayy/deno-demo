@@ -542,10 +542,10 @@
 <img style="border:none" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT26BRH9gk9Fz-yzdOEFcJZhYCsWNjJAP1RVg&usqp=CAU" />
 </div>
 <div>
-<img src="https://cdn.worldvectorlogo.com/logos/typescript.svg" style="border:none">
+<img src="https://cdn.worldvectorlogo.com/logos/typescript.svg" style="border:none" />
 </div>
 <div>
-<img src="https://listimg.pinclipart.com/picdir/s/126-1264324_flow-js-logo-svg-clipart.png" style="border:none">
+<img src="https://listimg.pinclipart.com/picdir/s/126-1264324_flow-js-logo-svg-clipart.png" style="border:none" />
 </div>
 </div>
             </section>
@@ -842,20 +842,12 @@ CoffeeScript | CoffeeScript II: The Wrath of Khan | Coco | LiveScript | IcedCoff
 
 
     
-    <section>
         <section >
+            
             <h2><a id="user-content-single-binary" class="anchor" href="#single-binary" aria-hidden="true"></a>Single binary</h2>
 <p>Can easily upgraded with <strong>deno upgrade</strong></p>
 
             </section>
-        
-            <section >
-                <h2><a id="user-content-deno-run" class="anchor" href="#deno-run" aria-hidden="true"></a>Deno run</h2>
-
-            </section>
-        
-
-    </section>
     
 
 
@@ -873,14 +865,7 @@ CoffeeScript | CoffeeScript II: The Wrath of Khan | Coco | LiveScript | IcedCoff
     
         <section >
             
-            <p><a href="https://deno.land/std/examples/cat.ts">https://deno.land/std/examples/cat.ts</a></p>
-<pre><code class="language-typescript">const filenames = Deno.args;
-for (const filename of filenames) {
-  const file = await Deno.open(filename);
-  await Deno.copy(file, Deno.stdout);
-  file.close();
-}
-</code></pre>
+            <h3><a id="user-content-deno-run" class="anchor" href="#deno-run" aria-hidden="true"></a>Deno run</h3>
 
             </section>
     
@@ -931,6 +916,14 @@ for (const filename of filenames) {
         <section >
             
             <h2><a id="user-content-deno-install" class="anchor" href="#deno-install" aria-hidden="true"></a>Deno install</h2>
+<p><a href="https://deno.land/std/examples/cat.ts">https://deno.land/std/examples/cat.ts</a></p>
+<pre><code class="language-typescript">const filenames = Deno.args;
+for (const filename of filenames) {
+  const file = await Deno.open(filename);
+  await Deno.copy(file, Deno.stdout);
+  file.close();
+}
+</code></pre>
 
             </section>
     
@@ -1048,6 +1041,9 @@ for (const filename of filenames) {
         <section >
             
             <h3><a id="user-content-urls-as-imports" class="anchor" href="#urls-as-imports" aria-hidden="true"></a>Urls as imports</h3>
+<ul>
+<li>Very easy to share code</li>
+</ul>
 
             </section>
     
@@ -1058,6 +1054,11 @@ for (const filename of filenames) {
         <section >
             
             <h3><a id="user-content-global-cached-depedencies" class="anchor" href="#global-cached-depedencies" aria-hidden="true"></a>Global cached depedencies</h3>
+<ul>
+<li>Support “lock” file for security</li>
+<li>deno info</li>
+<li>deno cache</li>
+</ul>
 
             </section>
     
@@ -1096,8 +1097,6 @@ for (const filename of filenames) {
 <ul>
 <li>Editor support</li>
 <li>–unstable flag</li>
-<li>Compatibility with npm packages</li>
-<li>Compatibility with node eco-system</li>
 <li>Typescript version</li>
 </ul>
 
@@ -1109,10 +1108,40 @@ for (const filename of filenames) {
     
         <section >
             
-            <p>Bringing scripting back</p>
+            <h3><a id="user-content-and-theres-more" class="anchor" href="#and-theres-more" aria-hidden="true"></a>And there’s more</h3>
+<ul>
+<li>Compatibility with npm packages</li>
+<li>Compatibility with node eco-system</li>
+<li>Private pacakges</li>
+<li>Multiple dependencies versions</li>
+</ul>
+
+            </section>
+    
+
+
+
+    
+        <section >
+            
+            <h3><a id="user-content-no-more-boilerplate" class="anchor" href="#no-more-boilerplate" aria-hidden="true"></a>No more boilerplate!!</h3>
+<p>TS service “template”:</p>
+<ul>
+<li>Hundreds of dependencies</li>
+<li>+10 configuration files</li>
+</ul>
+
+            </section>
+    
+
+
+
+    
+        <section >
+            
+            <h3><a id="user-content-bringing-scripting-back" class="anchor" href="#bringing-scripting-back" aria-hidden="true"></a>Bringing scripting back!</h3>
 <pre><code class="language-javascript">import { serve } from &quot;https://deno.land/std@0.59.0/http/server.ts&quot;;
 const s = serve({ port: 8000 });
-console.log(&quot;http://localhost:8000/&quot;);
 for await (const req of s) {
   req.respond({ body: &quot;Hello World\n&quot; });
 }
@@ -1126,7 +1155,7 @@ for await (const req of s) {
     
         <section >
             
-            <p>No more boilerplate!!</p>
+            <h3><a id="user-content-easy-to-publish-code" class="anchor" href="#easy-to-publish-code" aria-hidden="true"></a>Easy to “publish” code</h3>
 
             </section>
     
@@ -1136,7 +1165,7 @@ for await (const req of s) {
     
         <section >
             
-            <p>Deno is trending (64k stars)</p>
+            <h3><a id="user-content-deno-is-trending-64k-stars" class="anchor" href="#deno-is-trending-64k-stars" aria-hidden="true"></a>Deno is trending (64k stars)</h3>
 
             </section>
     
@@ -1149,7 +1178,8 @@ for await (const req of s) {
             <h2><a id="user-content-should-you-use-it" class="anchor" href="#should-you-use-it" aria-hidden="true"></a>Should you use it?</h2>
 <ul>
 <li>Easy to run with Docker</li>
-<li>Can be scope for a microservice</li>
+<li>Can be scoped for a single microservice</li>
+<li>Good ecosystem</li>
 <li>Especially useful for tooling/scripts</li>
 </ul>
 
@@ -1167,6 +1197,16 @@ for await (const req of s) {
 <li>Complex deployment can be described with a single TS file</li>
 <li>Enjoy type-safety and composition features of typescript</li>
 </ul>
+
+            </section>
+    
+
+
+
+    
+        <section >
+            
+            <h3><a id="user-content-deployts" class="anchor" href="#deployts" aria-hidden="true"></a>Deploy.ts</h3>
 
             </section>
     

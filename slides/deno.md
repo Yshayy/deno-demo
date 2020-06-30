@@ -141,10 +141,10 @@ CoffeeScript | Dart | **Typescript** | Flow | ReasonML
 <img style="border:none" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT26BRH9gk9Fz-yzdOEFcJZhYCsWNjJAP1RVg&usqp=CAU" />
 </div>
 <div>
-<img src="https://cdn.worldvectorlogo.com/logos/typescript.svg" style="border:none">
+<img src="https://cdn.worldvectorlogo.com/logos/typescript.svg" style="border:none" />
 </div>
 <div>
-<img src="https://listimg.pinclipart.com/picdir/s/126-1264324_flow-js-logo-svg-clipart.png" style="border:none">
+<img src="https://listimg.pinclipart.com/picdir/s/126-1264324_flow-js-logo-svg-clipart.png" style="border:none" />
 </div>
 </div>
 
@@ -309,25 +309,13 @@ Rethinking and standardizing toolchain
 
 Can easily upgraded with **deno upgrade**
 
---
-
-## Deno run
-
 ---
 
 ## First class Typescript support
 
 ---
 
-https://deno.land/std/examples/cat.ts
-```typescript
-const filenames = Deno.args;
-for (const filename of filenames) {
-  const file = await Deno.open(filename);
-  await Deno.copy(file, Deno.stdout);
-  file.close();
-}
-```
+### Deno run
 
 ---
 
@@ -348,6 +336,16 @@ for (const filename of filenames) {
 ---
 
 ## Deno install
+
+https://deno.land/std/examples/cat.ts
+```typescript
+const filenames = Deno.args;
+for (const filename of filenames) {
+  const file = await Deno.open(filename);
+  await Deno.copy(file, Deno.stdout);
+  file.close();
+}
+```
 
 ---
 
@@ -401,9 +399,15 @@ Rethinking Package management
 
 ### Urls as imports
 
+- Very easy to share code
+
 ---
 
 ### Global cached depedencies
+
+- Support "lock" file for security
+- deno info
+- deno cache
 
 ---
 
@@ -423,18 +427,32 @@ Rethinking Package management
 
 - Editor support
 - --unstable flag
-- Compatibility with npm packages
-- Compatibility with node eco-system
 - Typescript version
 
 ---
 
-Bringing scripting back
+### And there's more
+
+- Compatibility with npm packages
+- Compatibility with node eco-system
+- Private pacakges
+- Multiple dependencies versions
+
+---
+
+### No more boilerplate!!
+
+TS service "template": 
+- Hundreds of dependencies
+- +10 configuration files
+
+---
+
+### Bringing scripting back!
 
 ```javascript
 import { serve } from "https://deno.land/std@0.59.0/http/server.ts";
 const s = serve({ port: 8000 });
-console.log("http://localhost:8000/");
 for await (const req of s) {
   req.respond({ body: "Hello World\n" });
 }
@@ -442,18 +460,19 @@ for await (const req of s) {
 
 ---
 
-No more boilerplate!!
+### Easy to "publish" code
 
 ---
 
-Deno is trending (64k stars)
+### Deno is trending (64k stars)
 
 ---
 
 ## Should you use it?
 
 - Easy to run with Docker
-- Can be scope for a microservice
+- Can be scoped for a single microservice
+- Good ecosystem
 - Especially useful for tooling/scripts
 
 ---
@@ -463,6 +482,10 @@ Deno is trending (64k stars)
 * Deno toolkit for generating k8s configuration files
 * Complex deployment can be described with a single TS file
 * Enjoy type-safety and composition features of typescript
+
+---
+
+### Deploy.ts
 
 ---
 
