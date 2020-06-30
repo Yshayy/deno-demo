@@ -15,7 +15,7 @@ let devices = [
   },
 ];
 
-/*
+/** 
 Create handlers for smarthome server
 */
 export function createHandlers(data: typeof devices) {
@@ -31,7 +31,7 @@ export function createHandlers(data: typeof devices) {
 }
 let handlers = createHandlers(devices);
 
-/*
+/** 
 Start smart-home server
 */
 export async function startServer() {
